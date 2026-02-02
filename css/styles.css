@@ -1,0 +1,524 @@
+:root {
+    --juvania-color-primary: #8B4A6B;
+    --juvania-color-secondary: #FFF9F8;
+
+    --juvania-header-height: 80px;
+    --juvania-logo-size: 80px;
+    
+}
+
+body {
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    font-family: "Nunito", system-ui, sans-serif;
+}
+
+.juvania-button {
+    --juvania-button-padding-x: 0.75rem;
+    --juvania-button-padding-y: 0.375rem;
+    --juvania-button-font-size: 1rem;
+    background-color: var(--juvania-button-background);
+    color: var(--juvania-button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--juvania-button-font-size);
+    gap: 1rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    padding: var(--juvania-button-padding-y) var(--juvania-button-padding-x);
+    border: var(--juvania-button-border-width) solid var(--juvania-button-border-color);
+    border-radius: var(--juvania-button-border-radius);
+    transition: 0.25s;
+}
+
+.juvania-button:hover {
+    background-color: var(--juvania-button-hover-background);
+    color: var(--juvania-button-hover-color);
+    border-color: var(--juvania-button-hover-border-color);
+}
+
+.btn-primary {
+    --juvania-button-background: var(--juvania-color-primary);
+    --juvania-button-hover-background: #D4719C;
+    --juvania-button-color: #FFD3E8;
+    --juvania-button-hover-color: var(--juvania-color-secondary);
+    --juvania-button-font-size: 0.875rem;
+    --juvania-button-border-radius: 8px;
+}
+
+.btn-header {
+    --juvania-button-background: var(--juvania-color-primary);
+    --juvania-button-hover-background: #D4719C;
+    --juvania-button-color: #FFD3E8;
+    --juvania-button-hover-color: var(--juvania-color-secondary);
+    --juvania-button-padding-x: 1.5rem;
+    --juvania-button-padding-y: 0.125rem;
+    --juvania-button-border-radius: 25px;
+}
+
+.text-primary {
+    color: var(--juvania-color-primary) !important;
+}
+
+.border-low {
+    border-bottom: 1px solid #411843;
+}
+
+.product-card {
+    background: var(--juvania-color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(139, 74, 107, 0.25);
+}
+
+.card-header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.font-size-1 {
+    font-size: 0.75rem;
+}
+
+.font-size-2 {
+    font-size: 0.875rem;
+}
+
+.font-size-3 {
+    font-size: 1rem;
+}
+
+.font-size-4 {
+    font-size: 1.25rem;
+}
+
+.font-size-5 {
+    font-size: 1.5rem;
+}
+
+.font-size-6 {
+    font-size: 1.75rem;
+}
+
+.font-size-7 {
+    font-size: 1.875rem;
+}
+
+.font-size-8 {
+    font-size: 2rem;
+}
+
+/* Juvania Header */
+
+.juvania-header {
+    background-color: var(--juvania-color-secondary);
+    position: sticky;
+    top: 0;
+    height: var(--juvania-header-height);
+    border-bottom: 1px solid var(--juvania-color-primary);
+    z-index: 7;
+}
+
+.juvania-logo {
+    width: var(--juvania-logo-size);
+    margin-right: 1rem;
+}
+
+.juvania-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-icon {
+    display: block;
+    color: #8B4A6B;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.navbar-menu {
+    background-color: var(--juvania-color-secondary);
+    display: none;
+    position: absolute;
+    top: var(--juvania-header-height);
+    left: 0;
+    right: 0;
+    gap: 0.5rem;
+    padding: 1rem;
+    list-style: none;
+    border-bottom: 1px solid var(--juvania-color-primary);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.juvania-request {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.juvania-link {
+    color: var(--juvania-color-primary);
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.juvania-link:hover {
+    color: #D4719C;
+}
+
+/* Juvania Main */
+
+.juvania-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+/* Juvania Footer */
+
+.juvania-footer {
+    background-color: #8B4A6B;
+    color: #FFD3E8;
+    padding: 1rem;
+    border-top: #FFF9F8;
+}
+
+.footer-link {
+    color: #FFD3E8;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.footer-link:hover {
+    color: #FFF9F8;
+}
+
+.footer-nav .juvania-menu {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #F2BBCF40;
+    margin-bottom: 2rem;
+}
+
+.copyright-section {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* Home */
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(247, 198, 209, 0.3);
+    border-bottom: 1px solid #8B4A6B50;
+    padding: 1rem;
+}
+
+.hero-title {
+    color: #411843;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.juvania-division {
+    display: none;
+}
+
+/* Produtos */
+
+.juvania-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-input {
+    background-color: var(--juvania-color-secondary);
+    border-radius: 1rem;
+}
+
+.search-button {
+    --juvania-button-background: var(--juvania-color-primary);
+    --juvania-button-hover-background: #D4719C;
+    --juvania-button-color: #FFD3E8;
+    --juvania-button-hover-color: var(--juvania-color-secondary);
+    width: 6rem;
+    border-radius: 1rem;
+}
+
+/* Encomendas */
+
+.order-container {
+	background-color: #f4f4f4;
+	width: 100%;
+	max-width: 900px;
+	border-radius: 15px;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+	overflow: hidden;
+
+}
+
+.form-header {
+	background-color: #ebdadd;
+	padding: 15px;
+	text-align: center;
+	color: #5a5a5a;
+}
+
+.form-header h2 {
+	margin: 0;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.order-form {
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-columns {
+	display: flex;
+    flex-direction: column;
+	gap: 0;
+	margin-bottom: 20px;
+}
+
+.column {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.column h3 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 1.2rem;
+	color: #884A64;
+	border-bottom: 2px solid #ebdadd;
+	padding-bottom: 5px;
+}
+
+.input-group {
+	margin-bottom: 15px;
+}
+
+.input-group label {
+	display: block;
+	font-size: 0.9rem;
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.input-group input,
+.input-group select {
+	width: 100%;
+	height: 45px;
+	padding: 0 12px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	background-color: #fff;
+	font-size: 0.95rem;
+	color: #555;
+	outline: none;
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+	border-color: #884A64;
+	box-shadow: 0 0 0 3px rgba(136, 74, 100, 0.1);
+}
+
+.btn-submit {
+	background-color: #884A64;
+	color: white;
+	border: none;
+	padding: 15px;
+	border-radius: 8px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.btn-submit:hover {
+	background-color: #6d3b50;
+	transform: translateY(-2px);
+}
+
+/* Sobre */
+
+
+
+/* Galeria */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    grid-auto-flow: dense;
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery-item {
+    background-color: var(--juvania-color-secondary);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+
+@media(min-width: 768px) {
+
+    /* Juvania Header */
+
+    .header-nav {
+        justify-content: flex-start;
+    }
+
+    .juvania-menu {
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .juvania-request {
+        justify-content: flex-end;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .navbar-menu {
+        background-color: transparent;
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+        gap: 1rem;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .navbar-menu.active {
+        flex-direction: row;
+    }
+
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-title {
+        max-width: 360px;
+        text-align: start;
+    }
+
+    .juvania-division {
+        display: block;
+        align-self: flex-end;
+        width: 50%;
+        border-color: #411843;
+    }
+
+    /* Encomendas */
+
+    .form-columns {
+		flex-direction: row;
+        gap: 1rem;
+	}
+	
+	.order-form {
+		padding: 1rem;
+	}
+
+}
+
+@media (min-width: 992px) {
+
+    /* Galeria */
+
+    .gallery-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid-row-2 {
+        grid-row: span 2;
+    }
+
+    .grid-column-2 {
+        grid-column: span 2;
+    }
+
+}
