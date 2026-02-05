@@ -1,4 +1,7 @@
 :root {
+    --juvania-color-light: #FAFBFC;
+    --juvania-color-dark: #242526;
+
     --juvania-color-primary: #8B4A6B;
     --juvania-color-secondary: #FFF9F8;
 
@@ -19,6 +22,50 @@ body {
     min-height: 100vh;
     font-family: "Nunito", system-ui, sans-serif;
 }
+
+/* Juvania Utilities */
+
+.font-size-1 {
+    font-size: 0.75rem;
+}
+
+.font-size-2 {
+    font-size: 0.875rem;
+}
+
+.font-size-3 {
+    font-size: 1rem;
+}
+
+.font-size-4 {
+    font-size: 1.25rem;
+}
+
+.font-size-5 {
+    font-size: 1.5rem;
+}
+
+.font-size-6 {
+    font-size: 1.75rem;
+}
+
+.font-size-7 {
+    font-size: 1.875rem;
+}
+
+.font-size-8 {
+    font-size: 2rem;
+}
+
+.border-low {
+    border-bottom: 1px solid #411843;
+}
+
+.text-primary {
+    color: var(--juvania-color-primary) !important;
+}
+
+    /* Juvania Button */
 
 .juvania-button {
     --juvania-button-padding-x: 0.75rem;
@@ -65,13 +112,19 @@ body {
     --juvania-button-border-radius: 25px;
 }
 
-.text-primary {
-    color: var(--juvania-color-primary) !important;
+.btn-submit {
+    --juvania-button-background: var(--juvania-color-primary);
+    --juvania-button-hover-background: #D4719C;
+    --juvania-button-color: #FFD3E8;
+    --juvania-button-hover-color: var(--juvania-color-secondary);
+    --juvania-button-font-size: 1rem;
+    --juvania-button-border-radius: 8px;
+    --juvania-button-padding-x: 1rem;
+    --juvania-button-padding-y: 0.875rem;
+    width: 100%;
 }
 
-.border-low {
-    border-bottom: 1px solid #411843;
-}
+    /* Juvania Card */
 
 .product-card {
     background: var(--juvania-color-secondary);
@@ -84,42 +137,31 @@ body {
     border: 1px solid rgba(139, 74, 107, 0.25);
 }
 
-.card-header {
+.product-card .card-header {
     display: flex;
     height: 100%;
     align-items: center;
 }
 
-.font-size-1 {
-    font-size: 0.75rem;
-}
+    /* Juvania Form */
 
-.font-size-2 {
+.form-control, 
+.form-select {
+    background-color: var(--juvania-color-secondary);
+    color: #1E1E1E;
     font-size: 0.875rem;
 }
 
-.font-size-3 {
-    font-size: 1rem;
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--juvania-color-secondary);
+	border-color: var(--juvania-color-primary);
+	box-shadow: 0 0 0 3px rgba(136, 73, 99, 0.1);
 }
 
-.font-size-4 {
-    font-size: 1.25rem;
-}
-
-.font-size-5 {
-    font-size: 1.5rem;
-}
-
-.font-size-6 {
-    font-size: 1.75rem;
-}
-
-.font-size-7 {
-    font-size: 1.875rem;
-}
-
-.font-size-8 {
-    font-size: 2rem;
+.form-control::placeholder,
+.form-select::placeholder {
+    color: #1E1E1E;
 }
 
 /* Juvania Header */
@@ -292,108 +334,61 @@ body {
 
 /* Encomendas */
 
-.order-container {
-	background-color: #f4f4f4;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 15px;
-	box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-	overflow: hidden;
-
-}
-
-.form-header {
-	background-color: #ebdadd;
-	padding: 15px;
-	text-align: center;
-	color: #5a5a5a;
-}
-
-.form-header h2 {
-	margin: 0;
-	font-weight: 700;
-	font-size: 1.5rem;
-}
-
-.order-form {
-	padding: 40px;
-	display: flex;
-	flex-direction: column;
-}
-
-.form-columns {
-	display: flex;
+.form-order {
+    background-color: #F2F2F2;
+    display: flex;
     flex-direction: column;
-	gap: 0;
-	margin-bottom: 20px;
+	width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 50px 0 rgb(36, 37, 38);
+    min-height: 600px;
 }
 
-.column {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
+.form-order .form-header {
+    background: rgba(247, 198, 209, 0.30);
+    color: var(--juvania-color-dark);
+	text-align: center;
+    padding: 1rem;
+    border-radius: 25px 0 0 0;
+    border-bottom: 1px solid var(--juvania-color-primary);
+}
+
+.form-order .form-main {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.form-order .form-footer {
+    padding: 1rem 1.5rem 5rem;
+}
+
+.form-ordr .form-label {
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 0.75rem;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: var(--juvania-color-dark);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
     margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(36, 37, 38, 0.25);
 }
 
-.column h3 {
-	margin-top: 0;
-	margin-bottom: 20px;
-	font-size: 1.2rem;
-	color: #884A64;
-	border-bottom: 2px solid #ebdadd;
-	padding-bottom: 5px;
-}
-
-.input-group {
-	margin-bottom: 15px;
-}
-
-.input-group label {
-	display: block;
-	font-size: 0.9rem;
-	font-weight: 600;
-	margin-bottom: 5px;
-	color: #333;
-}
-
-.input-group input,
-.input-group select {
-	width: 100%;
-	height: 45px;
-	padding: 0 12px;
-	border: 1px solid #ddd;
-	border-radius: 6px;
-	background-color: #fff;
-	font-size: 0.95rem;
-	color: #555;
-	outline: none;
-	box-sizing: border-box;
-	font-family: inherit;
-}
-
-.input-group input:focus,
-.input-group select:focus {
-	border-color: #884A64;
-	box-shadow: 0 0 0 3px rgba(136, 74, 100, 0.1);
-}
-
-.btn-submit {
-	background-color: #884A64;
-	color: white;
-	border: none;
-	padding: 15px;
-	border-radius: 8px;
-	font-size: 1.1rem;
-	font-weight: bold;
-	cursor: pointer;
-	transition: background-color 0.3s, transform 0.2s;
-	width: 100%;
-	margin-top: 10px;
-}
-
-.btn-submit:hover {
-	background-color: #6d3b50;
-	transform: translateY(-2px);
+.form-order 
+.form-control, .form-select {
+    padding: 0.875rem;
 }
 
 /* Sobre */
@@ -417,8 +412,8 @@ body {
     height: 100%;
     position: relative;
     overflow: hidden;
-    border: 1px solid #000;
-    border-radius: 4px;
+    border-radius: 15px;
+    border: 1px solid rgba(139, 74, 107, 0.25);
 }
 
 .gallery-item img {
@@ -426,7 +421,7 @@ body {
     height: 100%;
     object-fit: contain;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.25s ease;
 }
 
 .gallery-item:hover img {
@@ -494,14 +489,14 @@ body {
 
     /* Encomendas */
 
-    .form-columns {
-		flex-direction: row;
-        gap: 1rem;
-	}
-	
-	.order-form {
-		padding: 1rem;
-	}
+    .form-order .form-main {
+        flex: 1;
+        padding: 3rem 5rem 0 5rem;
+    }
+
+    .form-order .form-footer {
+        padding: 1rem 5rem 5rem;
+    }
 
 }
 
@@ -517,7 +512,7 @@ body {
         grid-row: span 2;
     }
 
-    .grid-column-2 {
+    .grid-col-2 {
         grid-column: span 2;
     }
 
